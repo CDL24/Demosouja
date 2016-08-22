@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <RelativeLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        style="@style/diagonalStyle"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <customclasses.HexagonMaskView
+            android:id="@+id/image_1"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/ic_diploma"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <customclasses.HexagonMaskView
+            android:id="@+id/image_2"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/ic_blackboard"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <customclasses.HexagonMaskView
+            android:id="@+id/image_3"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/ic_medal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <customclasses.HexagonMaskView
+            android:id="@+id/image_4"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/ic_flask"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <View
+            android:id="@+id/circle"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mortarboard"
+
+            />
+    </RelativeLayout>
+</RelativeLayout>
