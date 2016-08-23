@@ -38,13 +38,62 @@ public class DashboardActivity extends AppCompatActivity {
     HexagonMaskView img1, img2, img3, img4;
     ToggleImitator imitator = null;
 
+
+    SpringSystem springSystem;
+    // create spring
+    Spring spring ;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
         initUIControls();
+
+        springSystem = SpringSystem.create();
+        // create spring
+        spring = springSystem.createSpring();
+
         loadDashboardAnimation();
+
+        eventListener();
+    }
+
+    private void eventListener() {
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                /*final SpringSystem springSystem = SpringSystem.create();
+                // create spring
+                final Spring spring = springSystem.createSpring();*/
+                // add listeners along arc
+                final double arc = 2 * Math.PI / mCircles.length;
+
+                for (int i = 0; i < mCircles.length; i++) {
+                    View view1 = mCircles[i];
+                    // map spring to a line segment from the center to the edge of the ring
+                    spring.addListener(new MapPerformer(view, View.TRANSLATION_X, 0, 1,
+                            0, (float) (RING_DIAMETER * Math.cos(i * arc))));
+                    spring.addListener(new MapPerformer(view, View.TRANSLATION_Y, 0, 1,
+                            0, (float) (RING_DIAMETER * Math.sin(i * arc))));
+                    spring.setEndValue(CLOSED);
+                }
+
+                imitator = new ToggleImitator(spring, CLOSED, CLOSED);
+                imitator.release(null);//actually release animation
+                Handler handler = new Handler();
+                Runnable runnable = new Runnable() {
+                    public void run() {
+                        Toast.makeText(DashboardActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
+                    }
+                };
+                handler.postAtTime(runnable, System.currentTimeMillis() + 1000);
+                handler.postDelayed(runnable, 1000);
+            }
+        });
+
     }
 
     private void initUIControls() {
@@ -150,9 +199,9 @@ public class DashboardActivity extends AppCompatActivity {
         createArcMenuElements();
         circles.recycle();
         /* Animations! */
-        final SpringSystem springSystem = SpringSystem.create();
+        //final SpringSystem springSystem = SpringSystem.create();
         // create spring
-        final Spring spring = springSystem.createSpring();
+        //final Spring spring = springSystem.createSpring();
         // add listeners along arc
         final double arc = 2 * Math.PI / mCircles.length;
 
