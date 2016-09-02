@@ -41,7 +41,7 @@ public class HexagonMaskView extends ImageView {
         this.mBorderPaint = new Paint();
         this.mBorderPaint.setColor(Color.WHITE);
         this.mBorderPaint.setStrokeCap(Paint.Cap.ROUND);
-        this.mBorderPaint.setStrokeWidth(30f);
+        this.mBorderPaint.setStrokeWidth(20f);
         this.mBorderPaint.setStyle(Paint.Style.STROKE);
     }
 

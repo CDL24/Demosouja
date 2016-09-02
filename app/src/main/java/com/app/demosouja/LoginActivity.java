@@ -19,6 +19,6 @@ public class LoginActivity extends Activity {
     }
 
     public void onLogin(View view){
-        startActivity(new Intent(this, DashboardActivity.class));
+        startActivity(new Intent(this, DashboardActivityNew.class));
     }
 }

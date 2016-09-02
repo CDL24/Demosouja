@@ -24,7 +24,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".DashboardActivity"
+            android:name=".DashboardActivityNew"
             android:screenOrientation="portrait" />
     </application>
 

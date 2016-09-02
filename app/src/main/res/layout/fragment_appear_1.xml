@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/root_view"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+	style="@style/diagonalStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<!--<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:clipChildren="false"
+		android:clipToPadding="false"
+		android:orientation="vertical"
+		android:layout_centerInParent="true">
+
+		<LinearLayout
+			android:clipChildren="false"
+			android:clipToPadding="false"
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<Space
+				android:layout_weight="1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"/>
+
+			<View
+				android:id="@+id/circle0"
+				android:background="@drawable/circle_green"
+				android:layout_width="100dp"
+				android:layout_height="100dp" />
+
+			<Space
+				android:layout_weight="1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"/>
+
+			<View
+				android:id="@+id/circle1"
+				android:background="@drawable/circle_orange"
+				android:layout_width="100dp"
+				android:layout_height="100dp" />
+
+			<Space
+				android:layout_weight="1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"/>
+
+			<View
+				android:id="@+id/circle2"
+				android:background="@drawable/circle_red"
+				android:layout_width="100dp"
+				android:layout_height="100dp" />
+
+			<Space
+				android:layout_weight="1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:clipChildren="false"
+			android:clipToPadding="false"
+			android:layout_marginTop="25dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<Space
+				android:layout_weight="1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"/>
+
+			<View
+				android:id="@+id/circle3"
+				android:background="@drawable/circle_orange"
+				android:layout_width="100dp"
+				android:layout_height="100dp" />
+
+			<Space
+				android:layout_weight="1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"/>
+
+			<View
+				android:id="@+id/circle4"
+				android:background="@drawable/circle_purple"
+				android:layout_width="100dp"
+				android:layout_height="100dp" />
+
+			<Space
+				android:layout_weight="1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"/>
+
+			<View
+				android:id="@+id/circle5"
+				android:background="@drawable/circle_green"
+				android:layout_width="100dp"
+				android:layout_height="100dp" />
+
+			<Space
+				android:layout_weight="1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"/>
+
+		</LinearLayout>
+
+	</LinearLayout>-->
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="false"
+		android:layout_alignParentStart="true"
+		android:layout_centerInParent="true">
+
+		<customclasses.HexagonMaskView
+            android:id="@+id/image_1"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/ic_diploma"
+			android:layout_alignParentTop="true"
+			android:layout_centerHorizontal="true" />
+
+		<customclasses.HexagonMaskView
+			android:id="@+id/image_2"
+			android:layout_width="@dimen/_80sdp"
+			android:layout_height="@dimen/_80sdp"
+			android:src="@drawable/ic_blackboard"
+			android:layout_below="@+id/image_1"
+			android:layout_toStartOf="@+id/image_1" />
+
+		<customclasses.HexagonMaskView
+			android:id="@+id/image_3"
+			android:layout_width="@dimen/_80sdp"
+			android:layout_height="@dimen/_80sdp"
+			android:src="@drawable/ic_medal"
+			android:layout_below="@+id/image_1"
+			android:layout_toEndOf="@+id/image_1" />
+
+		<customclasses.HexagonMaskView
+			android:id="@+id/image_4"
+			android:layout_width="@dimen/_80sdp"
+			android:layout_height="@dimen/_80sdp"
+			android:src="@drawable/ic_flask"
+			android:layout_below="@+id/image_3"
+			android:layout_toStartOf="@+id/image_3" />
+
+		<customclasses.HexagonMaskView
+			android:id="@+id/image_5"
+			android:layout_width="@dimen/_80sdp"
+			android:layout_height="@dimen/_80sdp"
+			android:src="@drawable/ic_diploma"
+			android:layout_below="@+id/image_4"
+			android:layout_alignStart="@+id/image_2" />
+
+		<customclasses.HexagonMaskView
+			android:id="@+id/image_6"
+			android:layout_width="@dimen/_80sdp"
+			android:layout_height="@dimen/_80sdp"
+			android:src="@drawable/ic_blackboard"
+			android:layout_below="@+id/image_4"
+			android:layout_alignStart="@+id/image_3" />
+
+		<customclasses.HexagonMaskView
+			android:id="@+id/image_7"
+			android:layout_width="@dimen/_80sdp"
+			android:layout_height="@dimen/_80sdp"
+			android:src="@drawable/ic_medal"
+			android:layout_below="@+id/image_5"
+			android:layout_alignStart="@+id/image_4" />
+
+	</RelativeLayout>
+</RelativeLayout>
